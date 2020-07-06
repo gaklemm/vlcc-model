@@ -32,11 +32,11 @@ class Graph(object):
         self.graph.set(title=self.title, xlabel='Date', ylabel=self.value)
         plt.show()
 
-    def save(self, filetype='html'):
+    def save(self, filetype='png'):
         """
         :param name2: (optional) name of secondary y data column
         :param filetype: file type ('png', 'jpg', 'svg', 'tiff', 'pdf'...)
         :return: plot files
         """
         fig = self.graph.get_figure()
-        fig.savefig('output/' + self.title + filetype)
+        fig.savefig('output/' + self.title + '.' + filetype)
